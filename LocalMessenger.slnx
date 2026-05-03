@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="LocalMessenger.app/LocalMessenger.App.csproj" />
+  <Project Path="LocalMessenger.Core/LocalMessenger.Core.csproj" />
+  <Project Path="LocalMessenger.Crypto/LocalMessenger.Crypto.csproj" />
+  <Project Path="LocalMessenger.Networking/LocalMessenger.Networking.csproj" />
+  <Project Path="LocalMessenger.Services/LocalMessenger.Services.csproj" />
+  <Project Path="LocalMessenger.Storage/LocalMessenger.Storage.csproj" />
+</Solution>

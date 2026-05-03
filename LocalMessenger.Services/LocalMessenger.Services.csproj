@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LocalMessenger.Core\LocalMessenger.Core.csproj" />
+    <ProjectReference Include="..\LocalMessenger.Crypto\LocalMessenger.Crypto.csproj" />
+    <ProjectReference Include="..\LocalMessenger.Networking\LocalMessenger.Networking.csproj" />
+    <ProjectReference Include="..\LocalMessenger.Storage\LocalMessenger.Storage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Messaging\" />
+    <Folder Include="Conversations\" />
+    <Folder Include="Queue\" />
+    <Folder Include="Pairing\" />
+    <Folder Include="Peers\" />
+  </ItemGroup>
+
+</Project>

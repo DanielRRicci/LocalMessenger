@@ -1,0 +1,182 @@
+﻿<Window x:Class="LocalMessenger.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LocalMessenger.App"
+        mc:Ignorable="d"
+        Title="LocalMessenger"
+        Height="650"
+        Width="1050"
+        MinHeight="500"
+        MinWidth="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#101418">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left sidebar -->
+        <Border Grid.Column="0" Background="#171D24" BorderBrush="#26313D" BorderThickness="0,0,1,0">
+            <Grid Margin="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="LocalMessenger"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,0,0,4"/>
+
+                <TextBlock Grid.Row="1"
+                           Text="Devices on your network"
+                           FontSize="13"
+                           Foreground="#95A3B3"
+                           Margin="0,0,0,18"/>
+
+                <StackPanel Grid.Row="2">
+                    <Border Background="#253142" CornerRadius="12" Padding="12" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Dad's PC" Foreground="White" FontSize="15" FontWeight="SemiBold"/>
+                            <TextBlock Text="Online • 192.168.1.42" Foreground="#7EE787" FontSize="12" Margin="0,3,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#1E2630" CornerRadius="12" Padding="12" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Living Room PC" Foreground="White" FontSize="15" FontWeight="SemiBold"/>
+                            <TextBlock Text="Online • 192.168.1.61" Foreground="#7EE787" FontSize="12" Margin="0,3,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#1E2630" CornerRadius="12" Padding="12" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Laptop" Foreground="White" FontSize="15" FontWeight="SemiBold"/>
+                            <TextBlock Text="Offline" Foreground="#D08888" FontSize="12" Margin="0,3,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <Button Grid.Row="3"
+                        Content="Settings"
+                        Height="38"
+                        Background="#26313D"
+                        Foreground="White"
+                        BorderBrush="#344152"/>
+            </Grid>
+        </Border>
+
+        <!-- Chat area -->
+        <Grid Grid.Column="1" Background="#101418">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="72"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="86"/>
+            </Grid.RowDefinitions>
+
+            <!-- Chat header -->
+            <Border Grid.Row="0" Background="#121922" BorderBrush="#26313D" BorderThickness="0,0,0,1">
+                <Grid Margin="22,0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Dad's PC"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
+                        <TextBlock Text="Online • trusted device"
+                                   Foreground="#95A3B3"
+                                   FontSize="13"
+                                   Margin="0,3,0,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Fake messages -->
+            <ScrollViewer Grid.Row="1" Padding="24">
+                <StackPanel>
+
+                    <Border Background="#1E2630"
+                            CornerRadius="14"
+                            Padding="14"
+                            HorizontalAlignment="Left"
+                            MaxWidth="520"
+                            Margin="0,0,0,14">
+                        <StackPanel>
+                            <TextBlock Text="Dad's PC" Foreground="#95A3B3" FontSize="12" Margin="0,0,0,4"/>
+                            <TextBlock Text="Hey, did you get the app running?"
+                                       Foreground="White"
+                                       FontSize="15"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#315A9A"
+                            CornerRadius="14"
+                            Padding="14"
+                            HorizontalAlignment="Right"
+                            MaxWidth="520"
+                            Margin="0,0,0,14">
+                        <StackPanel>
+                            <TextBlock Text="You" Foreground="#DCE8FF" FontSize="12" Margin="0,0,0,4"/>
+                            <TextBlock Text="Yep. Right now this is fake UI, but the structure is working."
+                                       Foreground="White"
+                                       FontSize="15"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#1E2630"
+                            CornerRadius="14"
+                            Padding="14"
+                            HorizontalAlignment="Left"
+                            MaxWidth="520"
+                            Margin="0,0,0,14">
+                        <StackPanel>
+                            <TextBlock Text="Dad's PC" Foreground="#95A3B3" FontSize="12" Margin="0,0,0,4"/>
+                            <TextBlock Text="Nice. Next we can wire up the send button, then eventually replace the fake messages with real message objects."
+                                       Foreground="White"
+                                       FontSize="15"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Message input -->
+            <Border Grid.Row="2" Background="#121922" BorderBrush="#26313D" BorderThickness="0,1,0,0">
+                <Grid Margin="22,16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="90"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Grid.Column="0"
+                             Height="42"
+                             FontSize="15"
+                             VerticalContentAlignment="Center"
+                             Padding="12,0"
+                             Background="#1E2630"
+                             Foreground="White"
+                             BorderBrush="#344152"
+                             Text="Type a message..."/>
+
+                    <Button Grid.Column="1"
+                            Content="Send"
+                            Height="42"
+                            Margin="12,0,0,0"
+                            Background="#3B82F6"
+                            Foreground="White"
+                            BorderBrush="#3B82F6"
+                            FontWeight="SemiBold"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
